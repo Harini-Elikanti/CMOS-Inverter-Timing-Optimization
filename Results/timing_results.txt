@@ -1,0 +1,67 @@
+CMOS INVERTER TIMING CHARACTERIZATION
+=====================================
+
+Technology: TSMC 180 nm
+VDD: 1.8 V
+Load capacitance: 1 pF
+Temperature: 27 C
+Simulator: LTspice
+
+BASELINE DESIGN
+---------------
+NMOS: W = 900 nm, L = 180 nm
+PMOS: W = 900 nm, L = 180 nm
+
+tPHL       = 1.710 ns
+tPLH       = 3.822 ns
+Rise time  = 7.950 ns
+Fall time  = 3.100 ns
+
+Average propagation delay:
+tp = (tPHL + tPLH)/2
+   = 2.766 ns
+
+
+PMOS SIZING OPTIMIZATION
+------------------------
+NMOS: W = 900 nm, L = 180 nm
+PMOS: W = 1.8 um, L = 180 nm
+
+tPHL       = 1.716 ns
+tPLH       = 2.011 ns
+Rise time  = 4.153 ns
+Fall time  = 3.102 ns
+
+Average propagation delay:
+tp = (tPHL + tPLH)/2
+   = 1.864 ns
+
+
+COMPARISON
+----------
+PMOS width was increased from 900 nm to 1.8 um.
+
+Average propagation delay:
+2.766 ns -> 1.864 ns
+
+Reduction:
+approximately 32.6%
+
+Low-to-high propagation delay:
+3.822 ns -> 2.011 ns
+
+Reduction:
+approximately 47.4%
+
+Rise time:
+7.950 ns -> 4.153 ns
+
+Reduction:
+approximately 47.8%
+
+
+CONCLUSION
+----------
+Increasing PMOS width improves pull-up drive strength,
+resulting in faster output charging and significantly
+improved low-to-high transition performance.
